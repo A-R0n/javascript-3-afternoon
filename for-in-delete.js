@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  var secret = [];
+  for(var key in obj){
+    secret.push(obj[key]);
+  }
+  return secret.join("");  //Code Here
 }
 
 
@@ -53,7 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for(var key in obj){
+    if(obj[key] > 10){
+      obj[key] = 0;
+    }
+  }
+  return obj;
+};//Code Here
 
 
 
@@ -65,7 +76,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(object){
+  for(var item in object){
+    object[item] = object[item] * 2;
+  }
+  return object;
+};//Code Here
 
 
 
@@ -79,7 +95,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(objecto){
+  var emptyString = "";
+  for(var a in objecto){
+    if(a.startsWith("sh")){
+      emptyString += objecto[a];
+    }
+  }
+  return emptyString;
+};//Code Here
 
 
 
@@ -110,7 +134,10 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(object){
+  delete object.password;
+  return object;
+};//Code Here
 
 
 
@@ -128,8 +155,14 @@ var deleteTheBigNumbers = {
 /*
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
-
-//Code Here
+function practice(deleteTheBigNumbers){
+  for(var b in deleteTheBigNumbers){
+    if(b > 100){
+      delete deleteTheBigNumbers[b];
+    }
+  }
+  return deleteTheBigNumbers;
+};//Code Here
 
 
 
@@ -142,7 +175,14 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+function startsWithK(object){
+  for(var c in object){
+    if(c.startsWith("k")){
+      delete object[c];
+    }
+  }
+  return object;
+};//Code Here
 
 
 
@@ -157,6 +197,15 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure(object){
+  for(var d in object){
+    for(var e in d){
+      if(e !== "treasure"){
+        delete object[d][e];
+      }
+    }
+  }
+  return object;
+};//Code Here
 
 
